@@ -1,0 +1,4 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Cows</title></head>
+<body><h1>Cow Master</h1><p><a href="/">Home</a></p>
+<table border="1"><thead><tr><th>ID</th><th>Name</th><th>Breed</th><th>Milk/day</th></tr></thead>
+<tbody>{% for c in cows %}<tr><td>{{ c.id }}</td><td>{{ c.name }}</td><td>{{ c.breed }}</td><td>{{ c.milk_per_day }}</td></tr>{% empty %}<tr><td colspan="4">No cows yet.</td></tr>{% endfor %}</tbody></table></body></html>

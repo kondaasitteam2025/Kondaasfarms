@@ -1,0 +1,4 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Valves</title></head><body>
+<h1>Valve Master</h1><p><a href="/">Home</a></p>
+<table border="1"><thead><tr><th>ID</th><th>Filter</th><th>Valve</th><th>Plant</th><th>Plant Count</th></tr></thead>
+<tbody>{% for v in valves %}<tr><td>{{ v.id }}</td><td>{{ v.filter.name }}</td><td>{{ v.name }}</td><td>{{ v.plant.name }}</td><td>{{ v.plant_count }}</td></tr>{% empty %}<tr><td colspan="5">No valves yet.</td></tr>{% endfor %}</tbody></table></body></html>

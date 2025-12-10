@@ -1,0 +1,8 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Create Task</title></head><body>
+<h1>Create Fertigation Task</h1><p><a href="/fertigation/tasks/">Back</a></p>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+<table>{{ form.as_table }}</table>
+<p><input type="submit" value="Create"></p>
+</form>
+<script>var s=document.querySelector('input[name="scheduled_date"]'); if(s){s.setAttribute('readonly','readonly')}</script>
+</body></html>

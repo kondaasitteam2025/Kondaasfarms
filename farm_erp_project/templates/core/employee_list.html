@@ -1,0 +1,10 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Employees</title></head>
+<body>
+  <h1>Employees</h1>
+  <p><a href="/">Home</a> | <a href="/admin/">Admin</a></p>
+  <table border="1" cellpadding="6">
+  <thead><tr><th>ID</th><th>Name</th><th>Phone</th><th>Assigned Valve</th></tr></thead>
+  <tbody>{% for e in employees %}
+    <tr><td>{{ e.id }}</td><td>{{ e.name }}</td><td>{{ e.phone }}</td><td>{% if e.assigned_valve %}{{ e.assigned_valve }}{% else %}-{% endif %}</td></tr>
+  {% empty %}<tr><td colspan="4">No employees yet. Use Admin.</td></tr>{% endfor %}</tbody></table>
+</body></html>
